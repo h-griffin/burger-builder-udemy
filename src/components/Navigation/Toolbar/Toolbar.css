@@ -1,6 +1,6 @@
 
 /* mobile */
-.Toolbar{
+.Toolbar {
     height: 56px;
     width: 100%;
     position: fixed;
@@ -15,18 +15,16 @@
     z-index: 90;
 }
 
-.Toolbar nav{
+.Toolbar nav {
     height: 100%;
-
 }
 
-.Logo{
-    height: 80%
+.Logo {
+    height: 80%;
 }
 
-/* mobile yes */
-@media(max-width: 499px){
-    .DesktopOnly{
+@media (max-width: 499px) {
+    .DesktopOnly {
         display: none;
     }
 }
