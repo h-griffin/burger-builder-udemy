@@ -2,16 +2,13 @@
 
 
 # TABLE OF CONTENTS
-## 1-2 -Javascript
+### 1-2 -Javascript
 - [udemy-javascript](https://github.com/h-griffin/udemy-javascript)
 
-## 3-7 -React
+### 3-7 -React
 - [udemy-react](https://github.com/h-griffin/udemy-react)
 
 ## 8 -Burger Builder : Basic
-
-
-
 
 - planning a react app
     - component tree/structure
@@ -38,3 +35,14 @@ localIdentName: '[name]__[local]__[hash:base64:5]'
 
 componetns - stateless
 containers - stateful
+
+### 9 -HTTP / Ajax
+- [blog-react-udemy](https://github.com/h-griffin/blog-react-udemy)
+
+## 10 -Burger Builder : Server
+
+- [firebase backend :google](https://firebase.google.com/) 
+- [burger-builder-react database](https://console.firebase.google.com/u/0/project/burger-builder-react-88892/database/burger-builder-react-88892/data)
+    - realtime database - sort of like mongoDB, no tables just big object
+    - fire base post// give base url and node name +.json ```url/orders.json```
+
