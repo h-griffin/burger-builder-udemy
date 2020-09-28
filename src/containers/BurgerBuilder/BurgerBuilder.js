@@ -111,6 +111,9 @@ class BurgerBuilder extends Component{
             queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
             //                  property name = property value
         }
+
+        queryParams.push('price=' + this.state.totalPrice); //send price in url
+
         const queryString = queryParams.join('&');
 
         this.props.history.push({
@@ -118,30 +121,6 @@ class BurgerBuilder extends Component{
             search: '?' + queryString
         });        
 
-        // this.setState({loading: true});
-
-        // const order ={
-        //     ingredients: this.state.ingredients,
-        //     price: this.state.totalPrice, // this bad for real app, price can be changed by user
-        //     customer: {
-        //         name: 'h griffin',
-        //         address: {
-        //             street: 'test street',
-        //             zipCode: '12345',
-        //             country: 'United States',
-        //         },
-        //     email: 'test@test.com'
-        //     },
-        //     delveryMethod: 'fastest'
-
-        // }
-        // axios.post('/orders.json', order) //!! .json for firebase !! 
-        //     .then(response => {
-        //         this.setState({loading: false, purchasing: false}); //purchasing to close modal
-        //     })
-        //     .catch(error => {
-        //         this.setState({loading: false}); // infinite loop if loading while error
-        //     });
     }
     render(){
         const disabledInfo = {
