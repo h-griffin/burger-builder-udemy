@@ -1,4 +1,4 @@
-import { checkPropTypes } from 'prop-types';
+// import { checkPropTypes } from 'prop-types';
 import React, {Component} from 'react';
 import { Route } from 'react-router-dom';
 
