@@ -2,18 +2,10 @@
 
 
 # TABLE OF CONTENTS
-### 1-2 -Javascript
-- [udemy-javascript](https://github.com/h-griffin/udemy-javascript)
-
-### 3-7 -React
-- [udemy-react](https://github.com/h-griffin/udemy-react)
 
 ## 8 -Burger Builder : Basic
 - [basic branch](https://github.com/h-griffin/burger-builder-udemy/tree/basic)
 - [baisic notes](notes/basic.md)
-
-### 9 -HTTP / Ajax
-- [blog-react-udemy : server/posts](https://github.com/h-griffin/blog-react-udemy/tree/posts)
 
 ## 10 -Burger Builder : Server
 - [server branch](https://github.com/h-griffin/burger-builder-udemy/tree/server)
@@ -22,9 +14,30 @@
     - [firebase backend :google](https://firebase.google.com/) 
     - [burger-builder-react database](https://console.firebase.google.com/u/0/project/burger-builder-react-88892/database/burger-builder-react-88892/data)
 
-### 11 -Routing
-- [blog-react-udemy : routing](https://github.com/h-griffin/blog-react-udemy/tree/routing)
-
-## 10 -Burger Builder : Routing
+## 12 -Burger Builder : Routing
 - [routing branch](https://github.com/h-griffin/burger-builder-udemy/tree/routing)
 
+## 13 -Burger Builder : Form Validation
+- [form branch](https://github.com/h-griffin/burger-builder-udemy/tree/form)
+- [showing errors](notes/showing-errors.md)
+    #### Useful Resources & Links
+    - Validate.js (you may import its functionality into your React projects): https://validatejs.org/
+    - Get more ideas about potential validation approaches: https://react.rocks/tag/Validation
+
+    Alternatives to the manual approach taken in this course:
+    - react-validation package: https://www.npmjs.com/package/react-validation
+    - formsy-react package: https://github.com/christianalfoni/formsy-react
+
+
+## Other repos from this course
+### 1-2 -Javascript
+- [udemy-javascript](https://github.com/h-griffin/udemy-javascript)
+
+### 3-7 -React
+- [udemy-react](https://github.com/h-griffin/udemy-react)
+
+### 9 -HTTP / Ajax
+- [blog-react-udemy : server/posts](https://github.com/h-griffin/blog-react-udemy/tree/posts)
+
+### 11 -Routing
+- [blog-react-udemy : routing](https://github.com/h-griffin/blog-react-udemy/tree/routing)
