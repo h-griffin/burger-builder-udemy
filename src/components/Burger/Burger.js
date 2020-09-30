@@ -5,7 +5,7 @@ import classes from './Burger.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = (props) => {
-    console.log(props);
+    console.log('[Burger.js] burger ingredients (object)',props);
 
 
     //tranform state object into array
@@ -25,7 +25,7 @@ const burger = (props) => {
     }
 
 
-    console.log(transformedIngredients);
+    console.log('[Burger.js] transformed ingredients (array) ',transformedIngredients);
 
     return (
         <div className={classes.Burger}>

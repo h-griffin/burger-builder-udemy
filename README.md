@@ -28,6 +28,8 @@
     - react-validation package: https://www.npmjs.com/package/react-validation
     - formsy-react package: https://github.com/christianalfoni/formsy-react
 
+## 15 -Burger Builder : Redux
+- [redux branch](https://github.com/h-griffin/burger-builder-udemy/tree/redux)
 
 ## Other repos from this course
 ### 1-2 -Javascript
@@ -41,3 +43,6 @@
 
 ### 11 -Routing
 - [blog-react-udemy : routing](https://github.com/h-griffin/blog-react-udemy/tree/routing)
+
+### 14 -redux
+- [udemy-redux](https://github.com/h-griffin/udemy-redux)

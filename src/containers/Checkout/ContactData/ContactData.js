@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
 
 import Button from '../../../components/UI/Button/Button';
 import classes from './ContactData.css';
@@ -8,6 +9,7 @@ import Input from '../../../components/UI/Input/Input';
 
 class ContactData extends Component {
     state={
+        //local ui state
         orderForm:{
             name: {
                 elementType:'input',
@@ -99,7 +101,6 @@ class ContactData extends Component {
         event.preventDefault(); // sends new req and reloads page
         // console.log(this.props.ingredients);
 
-
         // send order
         this.setState({loading: true});
 
@@ -109,7 +110,7 @@ class ContactData extends Component {
         } 
 
         const order ={
-            ingredients: this.props.ingredients,
+            ingredients: this.props.ings,
             // price: this.state.totalPrice, // this bad for real app, price can be changed by user
             price: this.props.price,
             orderData: formData,
@@ -220,4 +221,13 @@ class ContactData extends Component {
     }
 }
 
-export default ContactData;
+const mapStateToProps = state => {
+    return{
+        ings: state.ingredients,
+        price: state.totalPrice,
+    }
+}
+
+//not dispatching anything, just gathering state
+
+export default connect(mapStateToProps)(ContactData);

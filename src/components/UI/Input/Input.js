@@ -12,7 +12,7 @@ const input = (props) =>{
 
     let validationError = null;
     if(props.invalid && props.touched){
-        validationError = <p className={classes.validationError}>please enter a valid input</p>
+    validationError = <p className={classes.validationError}>please enter a valid input</p>
     }
 
     switch (props.elementType){
@@ -20,7 +20,8 @@ const input = (props) =>{
             inputElement = <input 
                 className={inputClasses.join(' ')} 
                 {...props.elementConfig} 
-                value={props.value}/>;
+                value={props.value}
+                onChange={props.changed}/>;
             break;
         case ('textarea'):
             inputElement = <textarea 
