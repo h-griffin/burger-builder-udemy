@@ -46,11 +46,12 @@ const reducer = (state= initialState, action) => {
                 ...state,
                 // ingredients: action.ingredients,     // alphabetical ing order from firebase
                 ingredients: {
-                    salad: action.ingredients.salad,    // manual ing order
+                    salad: action.ingredients.salad,    // manual ing stack order
                     bacon: action.ingredients.bacon,
                     cheese: action.ingredients.cheese,
                     meat: action.ingredients.meat,
                 },
+                totalPrice: 4,
                 error: false,
             }
         case actionTypes.FETCH_INGREDIENTS_FAILED:
