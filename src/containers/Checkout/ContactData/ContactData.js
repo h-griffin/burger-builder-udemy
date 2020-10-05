@@ -72,7 +72,7 @@ class ContactData extends Component {
             email: {
                 elementType:'email',
                 elementConfig: {
-                    type: 'text',
+                    type: 'email',
                     placeholder: 'Your E-Mail',
                 },
                 value: '',
@@ -123,6 +123,10 @@ class ContactData extends Component {
 
     checkValidity(value, rules){ //bool
         let isValid = true;
+        if (!rules) {
+            return true;
+        }
+
         if (rules.required){
             isValid = value.trim() !== '' && isValid;
         }
@@ -185,7 +189,6 @@ class ContactData extends Component {
 
         let form = (
             <form onSubmit={this.orderHandler}>
-                {/* <Input elementType='...' elementConfig='...' value='...' /> */}
                 {formElementsArray.map(formElement => (
                     <Input 
                         key={formElement.id}
@@ -199,7 +202,7 @@ class ContactData extends Component {
                         />
                 ))}
                 {/* <Button btnType='Success' clicked={this.orderHandler}>ORDER</Button> */}
-                <Button btnType='Success' disabled={this.state.formIsValid}>ORDER</Button>
+                <Button btnType='Success' disabled={!this.state.formIsValid}>ORDER</Button>
             </form>
         );
         if (this.state.loading){
@@ -218,7 +221,7 @@ const mapStateToProps = state => {
     return{
         ings: state.burgerBuilder.ingredients,
         price: state.burgerBuilder.totalPrice,
-        
+
         loading: state.order.loading,
     }
 }

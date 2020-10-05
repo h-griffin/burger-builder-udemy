@@ -21,10 +21,6 @@ class Checkout extends Component{
         this.props.history.replace('/checkout/contact-data');
     }
 
-    componentWillMount () {
-        this.props.onInitPurchase();
-    }
-
     render(){
         let summary = <Redirect to='/'/> // no ingredients 
         
@@ -63,4 +59,4 @@ const mapStateToProps = state => {
 
 //dont need dispatch here, just need to gether state
 
-export default connect(mapStateToProps )(Checkout);
+export default connect( mapStateToProps )( Checkout );
