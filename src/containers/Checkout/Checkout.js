@@ -1,11 +1,13 @@
 // import { checkPropTypes } from 'prop-types';
 import React, {Component} from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 
 
 import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSummary';
 import ContactData from './ContactData/ContactData';
 import {connect} from 'react-redux';
+
+import * as actions from '../../store/actions/index';
 
 class Checkout extends Component{
 
@@ -20,8 +22,15 @@ class Checkout extends Component{
     }
 
     render(){
-        return(
+        let summary = <Redirect to='/'/> // no ingredients 
+        
+        if(this.props.ings){
+            const purchasedRedirect = this.props.purchased ? <Redirect to ='/' /> : null;
+
+            // ingredients are now available not null
+            summary = 
             <div>
+                {purchasedRedirect}
                 <CheckoutSummary 
                     ingredients={this.props.ings}
                     checkoutCancelled={this.checkoutCancelledHandler}
@@ -29,24 +38,25 @@ class Checkout extends Component{
                 <Route 
                     path={this.props.match.path + '/contact-data'} 
                     component={ContactData}
-                    // render={(props) => (<ContactData 
-                    //     ingredients={this.props.ings} 
-                    //     price={this.state.totalPrice}
-                    //     {...props} //history 
-                    //     />)}
                     />
+            </div>
+
+        }
+        return(
+            <div>
+                {summary}
             </div>
         )
     }
 }
 
-const mapStatetoProps = state => {
+const mapStateToProps = state => {
     return{
-        ...state,
-        ings: state.ingredients,
-    }
-}
+        ings: state.burgerBuilder.ingredients,
+        purchased: state.order.purchased,
+    };
+};
 
 //dont need dispatch here, just need to gether state
 
-export default connect(mapStatetoProps)(Checkout);
+export default connect( mapStateToProps )( Checkout );

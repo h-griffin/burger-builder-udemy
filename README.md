@@ -31,6 +31,11 @@
 ## 15 -Burger Builder : Redux
 - [redux branch](https://github.com/h-griffin/burger-builder-udemy/tree/redux)
 
+## 17 -Burger Builder : Redux Advanced
+- [redux branch](https://github.com/h-griffin/burger-builder-udemy/tree/redux)
+
+- [redux-react devtools](https://github.com/zalmoxisus/redux-devtools-extension)
+
 ## Other repos from this course
 ### 1-2 -Javascript
 - [udemy-javascript](https://github.com/h-griffin/udemy-javascript)
@@ -46,3 +51,6 @@
 
 ### 14 -redux
 - [udemy-redux](https://github.com/h-griffin/udemy-redux)
+
+### 16 -redux : advanced - middleware
+- [udemy-redux](https://github.com/h-griffin/udemy-redux/tree/middleware)
