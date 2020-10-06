@@ -8,6 +8,8 @@
 
 <img align='center' alt="redux" width="56px" src="https://img.icons8.com/color/48/000000/redux.png" />
 
+<img align='center' alt="jest" width="56px" src="assets/jest.png" />
+
 <img align='center' alt="HTML5" width="56px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
 
 <img align='center' alt="CSS3" width="56px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
@@ -45,14 +47,13 @@
 - [redux branch](https://github.com/h-griffin/burger-builder-udemy/tree/redux)
 - synchronous actions
 
-
-## 17 -Burger Builder : Redux Advanced
+## 17 -Burger Builder : Redux Advanced - Middleware
 - [redux-advanced branch](https://github.com/h-griffin/burger-builder-udemy/tree/redux-advanced)
 - [redux-react devtools](https://github.com/zalmoxisus/redux-devtools-extension)
 
 - asynchronous actions with middleware
 
-## 17 -Burger Builder : Authentication
+## 18 -Burger Builder : Authentication
 - [authentication branch](https://github.com/h-griffin/burger-builder-udemy/tree/authentication)
     #### Useful Links & Rescources
     - [spa authentication in general:](https://stormpath.com/blog/token-auth-spa)
@@ -64,6 +65,14 @@
     - handle action in reducer
     - export in index
     
+## 19 -Burger Builder : Polishing
+- [polishing branch](https://github.com/h-griffin/burger-builder-udemy/tree/polishing)
+
+## 20 -Burger Builder : Testing
+- [polishing branch](https://github.com/h-griffin/burger-builder-udemy/tree/testing)
+    #### Useful Links & Rescources
+    - [Enzyme API: ](http://airbnb.io/enzyme/docs/api/)
+    - [Jest Docs: ](https://facebook.github.io/jest/)
 
 ## Other repos from this course
 ### 1-2 -Javascript
