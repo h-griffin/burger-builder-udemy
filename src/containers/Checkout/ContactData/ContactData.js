@@ -116,6 +116,7 @@ class ContactData extends Component {
             // price: this.state.totalPrice, // this bad for real app, price can be changed by user
             price: this.props.price,
             orderData: formData,
+            userId: this.props.userId,
         }
 
         this.props.onOrderBurger(order, this.props.token); //send dispatch
@@ -222,6 +223,7 @@ const mapStateToProps = state => {
         price: state.burgerBuilder.totalPrice,
         loading: state.order.loading,
         token : state.auth.token,
+        userId: state.auth.userId,
     }
 }
 

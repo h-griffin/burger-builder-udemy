@@ -1,5 +1,18 @@
 ## [Burger Builder: Udemy - Maximilian Schwarzmüller](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
 
+<div align='center'>
+
+<img align='center' alt="React" width="56px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" />
+
+<img align='center' alt="firebase" width="56px" src="https://img.icons8.com/color/48/000000/firebase.png" />
+
+<img align='center' alt="redux" width="56px" src="https://img.icons8.com/color/48/000000/redux.png" />
+
+<img align='center' alt="HTML5" width="56px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
+
+<img align='center' alt="CSS3" width="56px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
+
+</div>
 
 # TABLE OF CONTENTS
 
@@ -30,15 +43,20 @@
 
 ## 15 -Burger Builder : Redux
 - [redux branch](https://github.com/h-griffin/burger-builder-udemy/tree/redux)
+- synchronous actions
 
-synchronous actions
 
 ## 17 -Burger Builder : Redux Advanced
-- [redux branch](https://github.com/h-griffin/burger-builder-udemy/tree/redux)
-
+- [redux-advanced branch](https://github.com/h-griffin/burger-builder-udemy/tree/redux-advanced)
 - [redux-react devtools](https://github.com/zalmoxisus/redux-devtools-extension)
 
 - asynchronous actions with middleware
+
+## 17 -Burger Builder : Authentication
+- [authentication branch](https://github.com/h-griffin/burger-builder-udemy/tree/authentication)
+    #### Useful Links & Rescources
+    - [spa authentication in general:](https://stormpath.com/blog/token-auth-spa)
+    - [firebase authentication rest api](https://firebase.google.com/docs/reference/rest/auth)
 
     #### notes
     - create action const in action types
