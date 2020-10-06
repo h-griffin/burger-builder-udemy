@@ -38,7 +38,14 @@ synchronous actions
 
 - [redux-react devtools](https://github.com/zalmoxisus/redux-devtools-extension)
 
-asynchronous actions with middleware
+- asynchronous actions with middleware
+
+    #### notes
+    - create action const in action types
+    - set up action in action folder
+    - handle action in reducer
+    - export in index
+    
 
 ## Other repos from this course
 ### 1-2 -Javascript
