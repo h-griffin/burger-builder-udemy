@@ -57,6 +57,6 @@ const mapStateToProps = state => {
     };
 };
 
-//dont need dispatch here, just need to gether state
+//dont need dispatch here, just need to gather state
 
 export default connect( mapStateToProps )( Checkout );

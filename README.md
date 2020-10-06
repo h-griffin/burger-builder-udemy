@@ -31,10 +31,14 @@
 ## 15 -Burger Builder : Redux
 - [redux branch](https://github.com/h-griffin/burger-builder-udemy/tree/redux)
 
+synchronous actions
+
 ## 17 -Burger Builder : Redux Advanced
 - [redux branch](https://github.com/h-griffin/burger-builder-udemy/tree/redux)
 
 - [redux-react devtools](https://github.com/zalmoxisus/redux-devtools-extension)
+
+asynchronous actions with middleware
 
 ## Other repos from this course
 ### 1-2 -Javascript
