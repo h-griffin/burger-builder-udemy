@@ -35,10 +35,10 @@ class Orders extends Component{
 
 const mapStateToProps = state => {
     return{
-        orders: state.order.orders,
-        loading: state.order.loading,
-        token: state.auth.token,
-        userId: state.auth.userId,
+        orders: state.order.orders
+        ,loading: state.order.loading
+        ,token: state.auth.token
+        ,userId: state.auth.userId
     }
 }
 

@@ -3,21 +3,17 @@ import React, {Component} from 'react';
 import Aux from '../../../hoc/Aux/Aux';
 import Button from '../../UI/Button/Button';
 
+//this could be a func component
 class OrderSummary extends Component{
-    //this could be a func component
-    componentDidUpdate(){
-        console.log('[order sumary] will update');
-    }
 
-render () {
-    const ingredientSummary = Object.keys( this.props.ingredients )//expect obj convert to arr
-        .map( igKey => {
-            return (
-                <li key={igKey}>
-                    <span style={{ textTransform: 'capitalize' }}>{igKey}</span>: {this.props.ingredients[igKey]}
-                </li> );
-        } );
-
+    render () {
+        const ingredientSummary = Object.keys( this.props.ingredients )//expect obj convert to arr
+            .map( igKey => {
+                return (
+                    <li key={igKey}>
+                        <span style={{ textTransform: 'capitalize' }}>{igKey}</span>: {this.props.ingredients[igKey]}
+                    </li> );
+            } );
 
         return(
             <Aux>

@@ -1,12 +1,12 @@
 import * as actionTypes from '../actions/actionTypes';
-import { updateObject } from '../utility';
+import { updateObject } from '../../shared/utility';
 
 const initialState = {
-    token: null,
-    uerId: null,
-    error: null,
-    loading: false,
-    authRedirectPath: '/',
+    token: null
+    ,uerId: null
+    ,error: null
+    ,loading: false
+    ,authRedirectPath: '/'
 }
 
 const authStart = (state, action ) => {
@@ -15,10 +15,10 @@ const authStart = (state, action ) => {
 
 const authSuccess = (state, action) => {
     return updateObject(state, {
-        token: action.idToken,
-        userId: action.userId,
-        error: null,
-        loading: false,
+        token: action.idToken
+        ,userId: action.userId
+        ,error: null
+        ,loading: false
     })
 }
 
