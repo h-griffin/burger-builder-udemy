@@ -26,10 +26,10 @@ export const purchaseBurgerStart = () => {
     };
 };
 
-export const purchaseBurger = (orderData) => { // async / onlick order now
+export const purchaseBurger = (orderData, token) => { // async / onlick order now
     return dispatch => {
         dispatch(purchaseBurgerStart());
-        axios.post('/orders.json', orderData) //!! .json for firebase !! 
+        axios.post('/orders.json?auth=' + token, orderData) //!! .json for firebase !! 
             .then(response => {
                 console.log(response.data);
                 dispatch(purchaseBurgerSuccess(response.data.name, orderData));
@@ -66,10 +66,11 @@ export const fetchOrdersStart = () => {
     }
 }
 
-export const fetchOrders = () => {
+export const fetchOrders = (token) => {
     return dispatch => {
         dispatch(fetchOrdersStart());
-        axios.get('/orders.json')
+        // axios.get('/orders.json')
+        axios.get('/orders.json?auth=' + token)
         .then(res => {
             const fetchedOrders =[];
             for (let key in res.data){

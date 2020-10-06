@@ -12,6 +12,7 @@ import './index.css';
 import App from './App';
 import burgerBuilderReducer from './store/reducers/burgerBuilder';
 import orderReducer from './store/reducers/order';
+import authReducer from './store/reducers/auth';
 
 
 
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
     // slices of state
     burgerBuilder: burgerBuilderReducer,
     order: orderReducer,
+    auth: authReducer,
 })
 
 const store = createStore(rootReducer, composeEnhancers(
