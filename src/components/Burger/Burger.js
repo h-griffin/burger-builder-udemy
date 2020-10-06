@@ -5,9 +5,6 @@ import classes from './Burger.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = (props) => {
-    console.log('[Burger.js] burger ingredients (object)',props);
-
-
     //tranform state object into array
     let transformedIngredients = Object.keys(props.ingredients)//keys returns array / .map the array
         .map(igKey => {                                          //igkey=bacon
@@ -23,9 +20,6 @@ const burger = (props) => {
     if (transformedIngredients.length === 0){
         transformedIngredients = <p>start adding ingredients!</p>
     }
-
-
-    console.log('[Burger.js] transformed ingredients (array) ',transformedIngredients);
 
     return (
         <div className={classes.Burger}>

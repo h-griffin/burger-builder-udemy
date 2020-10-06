@@ -1,10 +1,10 @@
 import * as actionTypes from '../actions/actionTypes';
-import { updateObject } from '../utility';
+import { updateObject } from '../../shared/utility';
 
 const initialState = {
-    orders: [],
-    loading: false, // ordering / true when ordering/purchasing
-    purchased: false,
+    orders: []
+    ,loading: false // ordering / true when ordering/purchasing
+    ,purchased: false
 }
 
 const purchaseInit = (state, action) => {
@@ -18,9 +18,9 @@ const purchaseBurgerStart = (state, action) => {
 const purchaseBurgerSuccess = (state, action) => {
     const newOrder = updateObject( action.orderData, { id: action.orderId  } );
     return updateObject( state, {
-        loading: false,
-        purchased: true,
-        orders: state.orders.concat(newOrder) //concat new arr with old arr // immutable/safe
+        loading: false
+        ,purchased: true
+        ,orders: state.orders.concat(newOrder) //concat new arr with old arr // immutable/safe
     })
 }
 
@@ -34,8 +34,8 @@ const fetchOrdersStart = (state, action) => {
 
 const fetchOrdersSuccess = (state, action) => {
     return updateObject( state, {
-        orders: action.orders, // not needeed, orders loaded from server
-        loading: false,
+        orders: action.orders // not needeed, orders loaded from server
+        ,loading: false
     });
 }
 

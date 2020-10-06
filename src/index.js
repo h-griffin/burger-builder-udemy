@@ -15,8 +15,8 @@ import orderReducer from './store/reducers/order';
 import authReducer from './store/reducers/auth';
 
 
-
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// redux store only available in dev not production/deployed
+const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null|| compose;
 
 const rootReducer = combineReducers({
     // slices of state

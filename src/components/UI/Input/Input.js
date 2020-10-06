@@ -12,7 +12,7 @@ const input = (props) =>{
 
     let validationError = null;
     if(props.invalid && props.touched){
-    validationError = <p className={classes.validationError}>please enter a valid input</p>
+        validationError = <p className={classes.validationError}>please enter a valid input</p>
     }
 
     switch (props.elementType){

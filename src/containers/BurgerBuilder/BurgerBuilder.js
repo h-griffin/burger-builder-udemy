@@ -12,17 +12,13 @@ import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 
 import * as actions from '../../store/actions/index';
 
-
-
 class BurgerBuilder extends Component{
     state = {
         //local ui state
         purchasing:false,   // modal?
-
     }
 
     componentDidMount(){
-        console.log(this.props);
         this.props.onInitIngredients();
     }
 
@@ -104,20 +100,20 @@ class BurgerBuilder extends Component{
 
 const mapStateToProps = state => {
     return{
-        ings: state.burgerBuilder.ingredients,
-        price: state.burgerBuilder.totalPrice,
-        error: state.burgerBuilder.error,
-        isAuthenticated: state.auth.token !== null,
+        ings: state.burgerBuilder.ingredients
+        ,price: state.burgerBuilder.totalPrice
+        ,error: state.burgerBuilder.error
+        ,isAuthenticated: state.auth.token !== null
     };
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onIngredientAdded: (ingName) => dispatch(actions.addIngredient(ingName)),
-        onIngredientRemoved: (ingName) => dispatch(actions.removeIngredient(ingName)),
-        onInitIngredients: () => dispatch(actions.initIngredients()),
-        onInitPurchase: () => dispatch(actions.purchaseInit()),
-        onSetAuthRedirectPath: (path) => dispatch(actions.setAuthRedirectPath(path)),
+        onIngredientAdded: (ingName) => dispatch(actions.addIngredient(ingName))
+        ,onIngredientRemoved: (ingName) => dispatch(actions.removeIngredient(ingName))
+        ,onInitIngredients: () => dispatch(actions.initIngredients())
+        ,onInitPurchase: () => dispatch(actions.purchaseInit())
+        ,onSetAuthRedirectPath: (path) => dispatch(actions.setAuthRedirectPath(path))
     }
 }
 
