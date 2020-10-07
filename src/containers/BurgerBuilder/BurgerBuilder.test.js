@@ -5,7 +5,7 @@ import React from 'react';
 
 import { BurgerBuilder } from './BurgerBuilder';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
-import buildControls from '../../components/Burger/BuildControls/BuildControls';
+
 
 configure( {adapter: new Adapter()} );
 
@@ -19,7 +19,7 @@ describe('<BurgerBuilder/>', () => {
 
     it('should render <BuildControls/> when receiving ingredients', () => {
         wrapper.setProps({ings: {salad: 0}}); // props too late here, must give above ^^
-        expect(wrapper.find(buildControls)).toHaveLength(1);
+        expect(wrapper.find(BuildControls)).toHaveLength(1);
     });
 });
 

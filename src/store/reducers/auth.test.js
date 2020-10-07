@@ -1,11 +1,6 @@
 
-import { configure, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import React from 'react';
-
 import reducer from './auth';
 import * as actionTypes from '../actions/actionTypes';
-configure( {adapter: new Adapter()} );
 
 describe('auth reducer', () => {
     it('should return initial state', () => {
