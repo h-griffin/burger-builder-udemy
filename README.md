@@ -81,6 +81,15 @@
     #### notes
     - [deployment steps](notes/deployment.md)
 
+## 25 -Burger Builder : redux-saga
+- [deployment branch](https://github.com/h-griffin/burger-builder-udemy/tree/deployment)
+    #### notes
+    - "side affects": do not directly manipulate redux store
+        - accessing local stoarge 
+        - server 
+        - hcange route 
+        - start timeout 
+
 ## Other repos from this course
 ### 1-2 -Javascript
 - [udemy-javascript](https://github.com/h-griffin/udemy-javascript)
@@ -99,3 +108,4 @@
 
 ### 16 -redux : advanced - middleware
 - [udemy-redux](https://github.com/h-griffin/udemy-redux/tree/middleware)
+
