@@ -7,12 +7,16 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import {createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
+//redux-saga
+import createSagaMiddleware from 'redux-saga';
 //app
 import './index.css';
 import App from './App';
 import burgerBuilderReducer from './store/reducers/burgerBuilder';
 import orderReducer from './store/reducers/order';
 import authReducer from './store/reducers/auth';
+import { watchAuth } from './store/sagas/index';
+
 
 
 // redux store only available in dev not production/deployed
@@ -25,8 +29,10 @@ const rootReducer = combineReducers({
     auth: authReducer,
 })
 
+const sagaMiddleware = createSagaMiddleware();
+
 const store = createStore(rootReducer, composeEnhancers(
-    applyMiddleware(thunk) //async code in action creators
+    applyMiddleware(thunk, sagaMiddleware) //async code in action creators
 ));
 
 const app = (
@@ -36,6 +42,9 @@ const app = (
         </BrowserRouter>
     </Provider>
 );
+
+// sagaMiddleware.run(logoutSaga); //always calling
+sagaMiddleware.run(watchAuth);
 
 
 ReactDOM.render(app, document.getElementById('root'));
