@@ -2,7 +2,6 @@
 // synchronous add and remove
 
 import * as actionTypes from './actionTypes';
-import axios from '../../axios-orders';
 
 export const addIngredient = (name) => {
     return {
@@ -35,13 +34,7 @@ export const setIngredients = (ingredients) => {
 
 export const initIngredients = () => {
     // fetch default ingredients from firebase db
-    return dispatch => {
-        axios.get('https://burger-builder-react-88892.firebaseio.com/ingredients.json')
-        .then(response => {
-            dispatch(setIngredients(response.data));
-        })
-        .catch(error => {
-            dispatch(fetchIngredientsFailed())
-        });
-    };
+    return{
+        type: actionTypes.INIT_INGREDIENTS
+    }
 };

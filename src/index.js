@@ -15,8 +15,9 @@ import App from './App';
 import burgerBuilderReducer from './store/reducers/burgerBuilder';
 import orderReducer from './store/reducers/order';
 import authReducer from './store/reducers/auth';
-import { watchAuth } from './store/sagas/index';
 
+
+import { watchAuth, watchBurgerBuilder, watchOrder } from './store/sagas/index';
 
 
 // redux store only available in dev not production/deployed
@@ -45,6 +46,8 @@ const app = (
 
 // sagaMiddleware.run(logoutSaga); //always calling
 sagaMiddleware.run(watchAuth);
+sagaMiddleware.run(watchBurgerBuilder);
+sagaMiddleware.run(watchOrder);
 
 
 ReactDOM.render(app, document.getElementById('root'));

@@ -1,7 +1,7 @@
 // action creators for submitting orders
 
 import * as actionTypes from './actionTypes';
-import axios from '../../axios-orders';
+
 
 //                                      from db
 export const purchaseBurgerSuccess = (id, orderData) => {   //sync
@@ -27,17 +27,11 @@ export const purchaseBurgerStart = () => {
 };
 
 export const purchaseBurger = (orderData, token) => { // async / onlick order now
-    return dispatch => {
-        dispatch(purchaseBurgerStart());
-        axios.post('/orders.json?auth=' + token, orderData) //!! .json for firebase !! 
-            .then(response => {
-                console.log(response.data);
-                dispatch(purchaseBurgerSuccess(response.data.name, orderData));
-            })
-            .catch(error => {
-                dispatch(purchaseBurgerFail(error));
-            })
-    };
+    return{
+        type: actionTypes.PURCHASE_BURGER,
+        orderData: orderData,
+        token: token
+    }
 };
 
 export const purchaseInit = () => {
@@ -67,23 +61,9 @@ export const fetchOrdersStart = () => {
 }
 
 export const fetchOrders = (token, userId) => {
-    return dispatch => {
-        dispatch(fetchOrdersStart());
-        // axios.get('/orders.json')
-        const queryParams = '?auth=' + token + '&orderBy="userId"&equalTo="' + userId + '"';
-        axios.get('/orders.json' + queryParams)
-        .then(res => {
-            const fetchedOrders =[];
-            for (let key in res.data){
-                fetchedOrders.push({
-                    ...res.data[key],   // data/ingredients
-                    id: key,            // firebase key/id
-                });
-            }
-            dispatch(fetchOrdersSuccess(fetchedOrders));
-        })
-        .catch(err => {
-            dispatch(fetchOrdersFail(err));
-        })
+    return{
+        type: actionTypes.FETCH_ORDERS,
+        token: token,
+        userId: userId,
     }
 }
